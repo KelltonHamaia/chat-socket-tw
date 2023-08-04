@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Chat</title>
+  </head>
+  <body>
+    <div class="loginPage flex h-screen flex-col items-center justify-center gap-4 bg-white">
+      <label for="usernameInput">
+        <h1 class="text-2xl">Log with your nickname:</h1>
+      </label>
+      <input type="text" id="usernameInput" class="w-2/3 rounded border-2 border-blue-400 p-4 outline-blue-500" />
+    </div>
+    
+    <div class="chatPage flex h-screen flex-col bg-indigo-950 text-white">
+      <div class="flex flex-1">
+        <div class="chatArea flex-1">
+          <ul class="list-none chatUsers overflow-y-scroll chat-height px-2">
+          </ul>
+        </div>
+        <div class="userListArea w-48 bg-green-400 p-4">
+          <ul class="list-none connectedUsers px-2 chat-height"> </ul>
+        </div>
+      </div>
+      <div class="w-full">
+        <input type="text" id="messageInput" placeholder="Digite uma mensagem e aperte enter..." class="w-full h-10 px-2 text-black outline-none bg-gray-300" />
+      </div>
+    </div>
+    
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</html>
